@@ -1,0 +1,1470 @@
+
+Final Assignment 1
+
+
+Name : Jani Sarkar
+Roll :30029
+Course Code:CSE212
+Re-admission student
+
+
+1.Java program to print an Integer
+import java.util.Scanner;
+
+public class HelloWorld {
+
+    public static void main(String[] args) {
+
+        // Creates a reader instance which takes
+        // input from standard input - keyboard
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+
+        // nextInt() reads the next integer from the keyboard
+        int number = reader.nextInt();
+
+        // println() prints the following line to the output screen
+        System.out.println("You entered: " + number);
+    }
+}
+2.Java program to add two Integer
+class Main {
+
+  public static void main(String[] args) {
+    
+    System.out.println("Enter two numbers");
+    int first = 10;
+    int second = 20;
+    
+    System.out.println(first + " " + second);
+
+    // add two numbers
+    int sum = first + second;
+    System.out.println("The sum is: " + sum);
+  }
+}
+
+3.Java program to multiply two floating point number
+public class MultiplyTwoNumbers {
+
+    public static void main(String[] args) {
+
+        float first = 1.5f;
+        float second = 2.0f;
+
+        float product = first * second;
+
+        System.out.println("The product is: " + product);
+    }
+}
+
+4. Java program to ASCII value of a character
+public class AsciiValue {
+
+    public static void main(String[] args) {
+
+        char ch = 'a';
+        int ascii = ch;
+        // You can also cast char to int
+        int castAscii = (int) ch;
+
+        System.out.println("The ASCII value of " + ch + " is: " + ascii);
+        System.out.println("The ASCII value of " + ch + " is: " + castAscii);
+    }
+}
+5. Java program to compute quotient and remainder
+public class QuotientRemainder {
+
+  public static void main(String[] args) {
+
+    int dividend = 25, divisor = 4;
+
+    int quotient = dividend / divisor;
+    int remainder = dividend % divisor;
+
+    System.out.println("Quotient = " + quotient);
+    System.out.println("Remainder = " + remainder);
+  }
+}
+6. Java program to swap two numbers
+public class SwapNumbers {
+
+    public static void main(String[] args) {
+
+        float first = 1.20f, second = 2.45f;
+
+        System.out.println("--Before swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
+
+        // Value of first is assigned to temporary
+        float temporary = first;
+
+        // Value of second is assigned to first
+        first = second;
+
+        // Value of temporary (which contains the initial value of first) is assigned to second
+        second = temporary;
+
+        System.out.println("--After swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
+    }
+}
+7. java program to check whether a number is even or odd
+import java.util.Scanner;
+
+public class EvenOdd {
+
+    public static void main(String[] args) {
+
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = reader.nextInt();
+
+        if(num % 2 == 0)
+            System.out.println(num + " is even");
+        else
+            System.out.println(num + " is odd");
+    }
+}
+8.Java Program to Check Whether an Alphabet is Vowel or Consonan
+public class VowelConsonant {
+
+    public static void main(String[] args) {
+
+        char ch = 'i';
+
+        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' )
+            System.out.println(ch + " is vowel");
+        else
+            System.out.println(ch + " is consonant");
+
+    }
+}
+9.Java Program to Find the Largest Among Three Numbers
+public class Largest {
+
+    public static void main(String[] args) {
+
+        double n1 = -4.5, n2 = 3.9, n3 = 2.5;
+
+        if( n1 >= n2 && n1 >= n3)
+            System.out.println(n1 + " is the largest number.");
+
+        else if (n2 >= n1 && n2 >= n3)
+            System.out.println(n2 + " is the largest number.");
+
+        else
+            System.out.println(n3 + " is the largest number.");
+    }
+}
+10.Java Program to Find all Roots of a Quadratic Equation
+public class Main {
+
+  public static void main(String[] args) {
+
+    // value a, b, and c
+    double a = 2.3, b = 4, c = 5.6;
+    double root1, root2;
+
+    // calculate the determinant (b2 - 4ac)
+    double determinant = b * b - 4 * a * c;
+
+    // check if determinant is greater than 0
+    if (determinant > 0) {
+
+      // two real and distinct roots
+      root1 = (-b + Math.sqrt(determinant)) / (2 * a);
+      root2 = (-b - Math.sqrt(determinant)) / (2 * a);
+
+      System.out.format("root1 = %.2f and root2 = %.2f", root1, root2);
+    }
+
+    // check if determinant is equal to 0
+    else if (determinant == 0) {
+
+      // two real and equal roots
+      // determinant is equal to 0
+      // so -b + 0 == -b
+      root1 = root2 = -b / (2 * a);
+      System.out.format("root1 = root2 = %.2f;", root1);
+    }
+
+    // if determinant is less than zero
+    else {
+
+      // roots are complex number and distinct
+      double real = -b / (2 * a);
+      double imaginary = Math.sqrt(-determinant) / (2 * a);
+      System.out.format("root1 = %.2f+%.2fi", real, imaginary);
+      System.out.format("\nroot2 = %.2f-%.2fi", real, imaginary);
+    }
+  }
+}
+11.Java Program to Check Leap Year
+public class Main {
+
+  public static void main(String[] args) {
+
+    // year to be checked
+    int year = 1996;
+    boolean leap = false;
+
+    // if the year is divided by 4
+    if (year % 4 == 0) {
+
+      // if the year is century
+      if (year % 100 == 0) {
+
+        // if year is divided by 400
+        // then it is a leap year
+        if (year % 400 == 0)
+          leap = true;
+        else
+          leap = false;
+      }
+      
+      // if the year is not century
+      else
+        leap = true;
+    }
+    
+    else
+      leap = false;
+
+    if (leap)
+      System.out.println(year + " is a leap year.");
+    else
+      System.out.println(year + " is not a leap year.");
+  }
+}
+12.Java Program to Check Whether a Number is Positive or Negative
+public class PositiveNegative {
+
+    public static void main(String[] args) {
+
+        double number = 12.3;
+
+        // true if number is less than 0
+        if (number < 0.0)
+            System.out.println(number + " is a negative number.");
+
+        // true if number is greater than 0
+        else if ( number > 0.0)
+            System.out.println(number + " is a positive number.");
+
+        // if both test expression is evaluated to false
+        else
+            System.out.println(number + " is 0.");
+    }
+}
+13.Java Program to Check Whether a Character is Alphabet or Not
+public class Alphabet {
+
+    public static void main(String[] args) {
+
+        char c = '*';
+
+        if( (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+            System.out.println(c + " is an alphabet.");
+        else
+            System.out.println(c + " is not an alphabet.");
+    }
+}
+14.Java Program to Calculate the Sum of Natural Numbers
+public class SumNatural {
+
+    public static void main(String[] args) {
+
+        int num = 100, sum = 0;
+
+        for(int i = 1; i <= num; ++i)
+        {
+            // sum = sum + i;
+            sum += i;
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+15.Java Program to Find Factorial of a Number
+public class Factorial {
+
+    public static void main(String[] args) {
+
+        int num = 10;
+        long factorial = 1;
+        for(int i = 1; i <= num; ++i)
+        {
+            // factorial = factorial * i;
+            factorial *= i;
+        }
+        System.out.printf("Factorial of %d = %d", num, factorial);
+    }
+}
+16.Java Program to Generate Multiplication Table
+public class MultiplicationTable {
+
+    public static void main(String[] args) {
+
+        int num = 5;
+        for(int i = 1; i <= 10; ++i)
+        {
+            System.out.printf("%d * %d = %d \n", num, i, num * i);
+        }
+    }
+}
+17.Java Program to Display Fibonacci Series
+public class Fibonacci {
+
+    public static void main(String[] args) {
+
+        int n = 10, t1 = 0, t2 = 1;
+        System.out.print("First " + n + " terms: ");
+
+        for (int i = 1; i <= n; ++i)
+        {
+            System.out.print(t1 + " + ");
+
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}
+18.Java Program to Find GCD of two Numbers
+class Main {
+  public static void main(String[] args) {
+
+    // find GCD between n1 and n2
+    int n1 = 81, n2 = 153;
+    
+    // initially set to gcd
+    int gcd = 1;
+
+    for (int i = 1; i <= n1 && i <= n2; ++i) {
+
+      // check if i perfectly divides both n1 and n2
+      if (n1 % i == 0 && n2 % i == 0)
+        gcd = i;
+    }
+
+    System.out.println("GCD of " + n1 +" and " + n2 + " is " + gcd);
+  }
+}
+19.Java Program to Find LCM of two Numbers
+public class Main {
+  public static void main(String[] args) {
+
+    int n1 = 72, n2 = 120, lcm;
+
+    // maximum number between n1 and n2 is stored in lcm
+    lcm = (n1 > n2) ? n1 : n2;
+
+    // Always true
+    while(true) {
+      if( lcm % n1 == 0 && lcm % n2 == 0 ) {
+        System.out.printf("The LCM of %d and %d is %d.", n1, n2, lcm);
+        break;
+      }
+      ++lcm;
+    }
+  }
+}
+20.Java Program to Display Characters from A to Z using loop
+class Main {
+  public static void main(String[] args) {
+
+    char c;
+
+    for(c = 'A'; c <= 'Z'; ++c)
+      System.out.print(c + " ");
+    }
+}
+21.Java Program to Count Number of Digits in an Integer
+public class Main {
+
+  public static void main(String[] args) {
+
+    int count = 0, num = 0003452;
+
+    while (num != 0) {
+      // num = num/10
+      num /= 10;
+      ++count;
+    }
+
+    System.out.println("Number of digits: " + count);
+  }
+}
+22.Java Program to Reverse a Number
+class Main {
+  public static void main(String[] args) {
+
+    int num = 1234, reversed = 0;
+
+    while(num != 0) {
+    
+      int digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num /= 10;
+    }
+
+    System.out.println("Reversed Number: " + reversed);
+  }
+}
+23.Java Program to Calculate the Power of a Number
+public class Power {
+
+    public static void main(String[] args) {
+
+        int base = 3, exponent = 4;
+
+        long result = 1;
+
+        while (exponent != 0)
+        {
+            result *= base;
+            --exponent;
+        }
+
+        System.out.println("Answer = " + result);
+    }
+}
+24.Java Program to Check Whether a Number is Palindrome or Not
+public class Palindrome {
+
+    public static void main(String[] args) {
+
+        int num = 121, reversedInteger = 0, remainder, originalInteger;
+
+        originalInteger = num;
+
+        // reversed integer is stored in variable 
+        while( num != 0 )
+        {
+            remainder = num % 10;
+            reversedInteger = reversedInteger * 10 + remainder;
+            num  /= 10;
+        }
+
+        // palindrome if orignalInteger and reversedInteger are equal
+        if (originalInteger == reversedInteger)
+            System.out.println(originalInteger + " is a palindrome.");
+        else
+            System.out.println(originalInteger + " is not a palindrome.");
+    }
+}
+25.Java Program to Check Whether a Number is Prime or Not
+public class Main {
+
+  public static void main(String[] args) {
+
+    int num = 29;
+    boolean flag = false;
+    for (int i = 2; i <= num / 2; ++i) {
+      // condition for nonprime number
+      if (num % i == 0) {
+        flag = true;
+        break;
+      }
+    }
+
+    if (!flag)
+      System.out.println(num + " is a prime number.");
+    else
+      System.out.println(num + " is not a prime number.");
+  }
+}
+26.Java Program to Display Prime Numbers Between Two Intervals
+public class Prime {
+
+    public static void main(String[] args) {
+
+        int low = 20, high = 50;
+
+        while (low < high) {
+            boolean flag = false;
+
+            for(int i = 2; i <= low/2; ++i) {
+                // condition for nonprime number
+                if(low % i == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (!flag && low != 0 && low != 1)
+                System.out.print(low + " ");
+
+            ++low;
+        }
+    }
+}
+27.Java Program to Check Armstrong Number
+public class Armstrong {
+
+    public static void main(String[] args) {
+
+        int number = 371, originalNumber, remainder, result = 0;
+
+        originalNumber = number;
+
+        while (originalNumber != 0)
+        {
+            remainder = originalNumber % 10;
+            result += Math.pow(remainder, 3);
+            originalNumber /= 10;
+        }
+
+        if(result == number)
+            System.out.println(number + " is an Armstrong number.");
+        else
+            System.out.println(number + " is not an Armstrong number.");
+    }
+}
+28.Java Program to Display Armstrong Number Between Two Intervals
+public class Armstrong {
+
+    public static void main(String[] args) {
+
+        int low = 999, high = 99999;
+
+        for(int number = low + 1; number < high; ++number) {
+            int digits = 0;
+            int result = 0;
+            int originalNumber = number;
+
+            // number of digits calculation
+            while (originalNumber != 0) {
+                originalNumber /= 10;
+                ++digits;
+            }
+
+            originalNumber = number;
+
+            // result contains sum of nth power of its digits
+            while (originalNumber != 0) {
+                int remainder = originalNumber % 10;
+                result += Math.pow(remainder, digits);
+                originalNumber /= 10;
+            }
+
+            if (result == number)
+                System.out.print(number + " ");
+        }
+    }
+}
+29.Java Program to Display Prime Numbers Between Intervals Using Function
+public class Prime {
+
+    public static void main(String[] args) {
+
+        int low = 20, high = 50;
+
+        while (low < high) {
+            if(checkPrimeNumber(low))
+                System.out.print(low + " ");
+
+            ++low;
+        }
+    }
+
+    public static boolean checkPrimeNumber(int num) {
+        boolean flag = true;
+
+        for(int i = 2; i <= num/2; ++i) {
+
+            if(num % i == 0) {
+                flag = false;
+                break;
+            }
+        }
+
+        return flag;
+    }
+}
+30.Java Program to Display Armstrong Numbers Between Intervals Using Function
+public class Armstrong {
+
+    public static void main(String[] args) {
+
+        int low = 999, high = 99999;
+
+        for(int number = low + 1; number < high; ++number) {
+
+            if (checkArmstrong(number))
+                System.out.print(number + " ");
+        }
+    }
+
+    public static boolean checkArmstrong(int num) {
+        int digits = 0;
+        int result = 0;
+        int originalNumber = num;
+
+        // number of digits calculation
+        while (originalNumber != 0) {
+            originalNumber /= 10;
+            ++digits;
+        }
+
+        originalNumber = num;
+
+        // result contains sum of nth power of its digits
+        while (originalNumber != 0) {
+            int remainder = originalNumber % 10;
+            result += Math.pow(remainder, digits);
+            originalNumber /= 10;
+        }
+
+        if (result == num)
+            return true;
+
+        return false;
+    }
+}
+31.Java Program to Display Factors of a Number
+public class Main {
+
+  public static void main(String[] args) {
+
+    // positive number
+    int number = 60;
+
+    System.out.print("Factors of " + number + " are: ");
+
+    // loop runs from 1 to 60
+    for (int i = 1; i <= number; ++i) {
+
+      // if number is divided by i
+      // i is the factor
+      if (number % i == 0) {
+        System.out.print(i + " ");
+      }
+    }
+  }
+}
+32.Java Program to Make a Simple Calculator Using switch case
+import java.util.Scanner;
+
+class Main {
+
+  public static void main(String[] args) {
+
+    Scanner reader = new Scanner(System.in);
+    System.out.print("Enter two numbers: ");
+
+    // nextDouble() reads the next double from the keyboard
+    double first = reader.nextDouble();
+    double second = reader.nextDouble();
+
+    System.out.print("Enter an operator (+, -, *, /): ");
+    char operator = reader.next().charAt(0);
+
+    double result = 0.0;
+
+    switch (operator) {
+      case '+':
+        result = first + second;
+        break;
+
+      case '-':
+        result = first - second;
+        break;
+
+      case '*':
+        result = first * second;
+        break;
+
+      case '/':
+        result = first / second;
+        break;
+
+      // operator doesn't match any case constant (+, -, *, /)
+      default:
+        System.out.printf("Error! operator is not correct");
+        return;
+    }
+
+    System.out.println(first + " " + operator + " " + second + " = " + result);
+  }
+}
+33.Java Program to Check Whether a Number can be Expressed as Sum of Two Prime Numbers
+public class Main {
+
+  public static void main(String[] args) {
+    int number = 34;
+    boolean flag = false;
+    for (int i = 2; i <= number / 2; ++i) {
+
+      // condition for i to be a prime number
+      if (checkPrime(i)) {
+
+        // condition for n-i to be a prime number
+        if (checkPrime(number - i)) {
+
+          // n = primeNumber1 + primeNumber2
+          System.out.printf("%d = %d + %d\n", number, i, number - i);
+          flag = true;
+        }
+
+      }
+    }
+
+    if (!flag)
+      System.out.println(number + " cannot be expressed as the sum of two prime numbers.");
+  }
+
+  // Function to check prime number
+  static boolean checkPrime(int num) {
+    boolean isPrime = true;
+
+    for (int i = 2; i <= num / 2; ++i) {
+      if (num % i == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+
+    return isPrime;
+  }
+}
+34.Java Program to Find the Sum of Natural Numbers using Recursion
+public class AddNumbers {
+
+    public static void main(String[] args) {
+        int number = 20;
+        int sum = addNumbers(number);
+        System.out.println("Sum = " + sum);
+    }
+
+    public static int addNumbers(int num) {
+        if (num != 0)
+            return num + addNumbers(num - 1);
+        else
+            return num;
+    }
+}
+35.Java Program to Find Factorial of a Number Using Recursion
+public class Factorial {
+
+    public static void main(String[] args) {
+        int num = 6;
+        long factorial = multiplyNumbers(num);
+        System.out.println("Factorial of " + num + " = " + factorial);
+    }
+    public static long multiplyNumbers(int num)
+    {
+        if (num >= 1)
+            return num * multiplyNumbers(num - 1);
+        else
+            return 1;
+    }
+}
+36.Java Program to Find G.C.D Using Recursion
+public class GCD {
+
+    public static void main(String[] args) {
+        int n1 = 366, n2 = 60;
+        int hcf = hcf(n1, n2);
+
+        System.out.printf("G.C.D of %d and %d is %d.", n1, n2, hcf);
+    }
+
+    public static int hcf(int n1, int n2)
+    {
+        if (n2 != 0)
+            return hcf(n2, n1 % n2);
+        else
+            return n1;
+    }
+}
+37.Java Program to Convert Binary Number to Decimal and vice-versa
+class Main {
+    
+  public static void main(String[] args) {
+    long num = 110110111;
+    int decimal = convertBinaryToDecimal(num);
+    System.out.println("Binary to Decimal");
+    System.out.println(num + " = " + decimal);
+  }
+
+  public static int convertBinaryToDecimal(long num) {
+    int decimalNumber = 0, i = 0;
+    long remainder;
+    
+    while (num != 0) {
+      remainder = num % 10;
+      num /= 10;
+      decimalNumber += remainder * Math.pow(2, i);
+      ++i;
+    }
+    
+    return decimalNumber;
+  }
+}
+38.Java Program to Convert Octal Number to Decimal and vice-versa
+public class DecimalOctal {
+
+    public static void main(String[] args) {
+        int decimal = 78;
+        int octal = convertDecimalToOctal(decimal);
+        System.out.printf("%d in decimal = %d in octal", decimal, octal);
+    }
+
+    public static int convertDecimalToOctal(int decimal)
+    {
+        int octalNumber = 0, i = 1;
+
+        while (decimal != 0)
+        {
+            octalNumber += (decimal % 8) * i;
+            decimal /= 8;
+            i *= 10;
+        }
+
+        return octalNumber;
+    }
+}
+39.Java Program to Convert Binary Number to Octal and vice-versa
+public class BinaryOctal {
+
+    public static void main(String[] args) {
+        long binary = 101001;
+        int octal = convertBinarytoOctal(binary);
+        System.out.printf("%d in binary = %d in octal", binary, octal);
+    }
+
+    public static int convertBinarytoOctal(long binaryNumber)
+    {
+        int octalNumber = 0, decimalNumber = 0, i = 0;
+
+        while(binaryNumber != 0)
+        {
+            decimalNumber += (binaryNumber % 10) * Math.pow(2, i);
+            ++i;
+            binaryNumber /= 10;
+        }
+
+        i = 1;
+
+        while (decimalNumber != 0)
+        {
+            octalNumber += (decimalNumber % 8) * i;
+            decimalNumber /= 8;
+            i *= 10;
+        }
+
+        return octalNumber;
+    }
+}
+40.Java Program to Reverse a Sentence Using Recursion
+public class Reverse {
+
+  public static void main(String[] args) {
+    String sentence = "Go work";
+    String reversed = reverse(sentence);
+    System.out.println("The reversed sentence is: " + reversed);
+  }
+
+  public static String reverse(String sentence) {
+    if (sentence.isEmpty())
+      return sentence;
+
+    return reverse(sentence.substring(1)) + sentence.charAt(0);
+  }
+}
+41.Java Program to calculate the power using recursion
+public class Power {
+
+    public static void main(String[] args) {
+        int base = 3, powerRaised = 4;
+        int result = power(base, powerRaised);
+
+        System.out.printf("%d^%d = %d", base, powerRaised, result);
+    }
+
+    public static int power(int base, int powerRaised) {
+        if (powerRaised != 0)
+            return (base * power(base, powerRaised - 1));
+        else
+            return 1;
+    }
+}
+42.Java Program to Calculate Average Using Arrays
+public class Average {
+
+    public static void main(String[] args) {
+        double[] numArray = { 45.3, 67.5, -45.6, 20.34, 33.0, 45.6 };
+        double sum = 0.0;
+
+        for (double num: numArray) {
+           sum += num;
+        }
+
+        double average = sum / numArray.length;
+        System.out.format("The average is: %.2f", average);
+    }
+}
+43.Java Program to Find Largest Element of an Array
+public class Largest {
+
+    public static void main(String[] args) {
+        double[] numArray = { 23.4, -34.5, 50.0, 33.5, 55.5, 43.7, 5.7, -66.5 };
+        double largest = numArray[0];
+
+        for (double num: numArray) {
+            if(largest < num)
+                largest = num;
+        }
+
+        System.out.format("Largest element = %.2f", largest);
+    }
+}
+44.Java Program to Calculate Standard Deviation
+public class StandardDeviation {
+
+    public static void main(String[] args) {
+        double[] numArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        double SD = calculateSD(numArray);
+
+        System.out.format("Standard Deviation = %.6f", SD);
+    }
+
+    public static double calculateSD(double numArray[])
+    {
+        double sum = 0.0, standardDeviation = 0.0;
+        int length = numArray.length;
+
+        for(double num : numArray) {
+            sum += num;
+        }
+
+        double mean = sum/length;
+
+        for(double num: numArray) {
+            standardDeviation += Math.pow(num - mean, 2);
+        }
+
+        return Math.sqrt(standardDeviation/length);
+    }
+}
+45.Java Program to Add Two Matrix Using Multi-dimensional Arrays
+public class AddMatrices {
+
+    public static void main(String[] args) {
+        int rows = 2, columns = 3;
+        int[][] firstMatrix = { {2, 3, 4}, {5, 2, 3} };
+        int[][] secondMatrix = { {-4, 5, 3}, {5, 6, 3} };
+
+        // Adding Two matrices
+        int[][] sum = new int[rows][columns];
+        for(int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                sum[i][j] = firstMatrix[i][j] + secondMatrix[i][j];
+            }
+        }
+
+        // Displaying the result
+        System.out.println("Sum of two matrices is: ");
+        for(int[] row : sum) {
+            for (int column : row) {
+                System.out.print(column + "    ");
+            }
+            System.out.println();
+        }
+    }
+}
+46.Java Program to Multiply to Matrix Using Multi-dimensional Arrays
+public class MultiplyMatrices {
+
+    public static void main(String[] args) {
+        int r1 = 2, c1 = 3;
+        int r2 = 3, c2 = 2;
+        int[][] firstMatrix = { {3, -2, 5}, {3, 0, 4} };
+        int[][] secondMatrix = { {2, 3}, {-9, 0}, {0, 4} };
+
+        // Mutliplying Two matrices
+        int[][] product = new int[r1][c2];
+        for(int i = 0; i < r1; i++) {
+            for (int j = 0; j < c2; j++) {
+                for (int k = 0; k < c1; k++) {
+                    product[i][j] += firstMatrix[i][k] * secondMatrix[k][j];
+                }
+            }
+        }
+
+        // Displaying the result
+        System.out.println("Sum of two matrices is: ");
+        for(int[] row : product) {
+            for (int column : row) {
+                System.out.print(column + "    ");
+            }
+            System.out.println();
+        }
+    }
+}
+47.Java Program to Multiply two Matrices by Passing Matrix to a Function
+class MUlMatrix
+{
+public static void main(String args[])
+{
+int r1, r2,c1,c2,i,j,k,sum;
+Scanner in = new Scanner(System.in);
+ 
+System.out.println("Enter the number of rows of matrix1");
+r1 = in.nextInt();
+ 
+System.out.println("Enter the number columns of matrix 1");
+c1 = in.nextInt();
+System.out.println("Enter the number of rows of matrix2");
+r2 = in.nextInt();
+ 
+System.out.println("Enter the number of columns of matrix 2");
+c2 = in.nextInt();
+ 
+if(c1==r2)
+{
+ 
+int mat1[][] = new int[r1][c1]; 
+int mat2[][] = new int[r2][c2]; 
+int res[][] = new int[r1][c2];
+ 
+System.out.println("Enter the elements of matrix1");
+ 
+for ( i= 0 ; i < r1 ; i++ )
+{ 
+ 
+for ( j= 0 ; j < c1 ;j++ )
+mat1[i][j] = in.nextInt();
+ 
+}
+System.out.println("Enter the elements of matrix2");
+ 
+for ( i= 0 ; i < r2 ; i++ )
+{ 
+ 
+for ( j= 0 ; j < c2 ;j++ )
+mat2[i][j] = in.nextInt();
+ 
+}
+ 
+System.out.println("\n\noutput matrix:-");
+for ( i= 0 ; i < r1 ; i++ )
+ 
+for ( j= 0 ; j <c2;j++)
+{
+sum=0;
+for ( k= 0 ; k <r2;k++ )
+{
+sum +=mat1[i][k]*mat2[k][j] ;
+ 
+}
+res[i][j]=sum;
+}
+for ( i= 0 ; i < r1; i++ )
+{
+for ( j=0 ; j < c2;j++ )
+System.out.print(res[i][j]+" ");
+ 
+System.out.println();
+}
+}
+else
+System.out.print("multipication does not exist ");
+}
+ 
+}
+48.Java Program to Find Transpose of a Matrix
+import java.util.Scanner;
+
+class TransposeAMatrix
+{
+  public static void main(String args[])
+  {
+    int m, n, c, d;
+
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter the number of rows and columns of matrix");
+    m = in.nextInt();
+    n = in.nextInt();
+
+    int matrix[][] = new int[m][n];
+
+    System.out.println("Enter elements of the matrix");
+
+    for (c = 0; c < m; c++)
+      for (d = 0; d < n; d++)
+        matrix[c][d] = in.nextInt();
+
+    int transpose[][] = new int[n][m];
+
+    for (c = 0; c < m; c++)
+      for (d = 0; d < n; d++)
+        transpose[d][c] = matrix[c][d];
+
+    System.out.println("Transpose of the matrix:");
+
+    for (c = 0; c < n; c++)
+    {
+      for (d = 0; d < m; d++)
+        System.out.print(transpose[c][d]+"\t");
+
+      System.out.print("\n");
+    }
+  }
+}
+49.Java Program to Find the Frequency of Character in a String
+string = "picture perfect";  
+freq = [None] * len(string);  
+   
+for i in range(0, len(string)):  
+    freq[i] = 1;  
+    for j in range(i+1, len(string)):  
+        if(string[i] == string[j]):  
+            freq[i] = freq[i] + 1;  
+              
+            #Set string[j] to 0 to avoid printing visited character  
+            string = string[ : j] + '0' + string[j+1 : ];  
+              
+#Displays the each character and their corresponding frequency  
+print("Characters and their corresponding frequencies");  
+for i in range(0, len(freq)):  
+    if(string[i] != ' ' and string[i] != '0'):  
+        print(string[i] + "-" + str(freq[i]));
+50.Java Program to Count the Number of Vowels and Consonants in a Sentence
+    public class CountVowelConsonant {    
+        public static void main(String[] args) {    
+                
+            //Counter variable to store the count of vowels and consonant    
+            int vCount = 0, cCount = 0;    
+                
+            //Declare a string    
+            String str = "This is a really simple sentence";    
+                
+            //Converting entire string to lower case to reduce the comparisons    
+            str = str.toLowerCase();    
+                
+            for(int i = 0; i < str.length(); i++) {    
+                //Checks whether a character is a vowel    
+                if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {    
+                    //Increments the vowel counter    
+                    vCount++;    
+                }    
+                //Checks whether a character is a consonant    
+                else if(str.charAt(i) >= 'a' && str.charAt(i)<='z') {      
+                    //Increments the consonant counter    
+                    cCount++;    
+                }    
+            }    
+            System.out.println("Number of vowels: " + vCount);    
+            System.out.println("Number of consonants: " + cCount);    
+        }    
+    }   
+51.Java Program to Sort Elements in Lexicographical Order (Dictionary Order)
+    public class Sort {
+    public static void main(String[] args) {
+    String[] words = { "Ruby", "C", "Python", "Java" };
+    for(int i = 0; i < 3; ++i) {
+    for (int j = i + 1; j < 4; ++j) {
+    if (words[i].compareTo(words[j]) > 0) {
+    // swap words[i] with words[j[
+    String temp = words[i];
+    words[i] = words[j];
+    words[j] = temp;
+    }
+    }
+    }
+    System.out.println("In lexicographical order:");
+    for(int i = 0; i < 4; i++) {
+    System.out.println(words[i]);
+    }
+    }
+    }
+52.Java Program to Add Two Complex Numbers by Passing Class to a Function
+public class Complex {
+
+    double real;
+    double imag;
+
+    public Complex(double real, double imag) {
+        this.real = real;
+        this.imag = imag;
+    }
+
+    public static void main(String[] args) {
+        Complex n1 = new Complex(2.3, 4.5),
+                n2 = new Complex(3.4, 5.0),
+                temp;
+
+        temp = add(n1, n2);
+
+        System.out.printf("Sum = %.1f + %.1fi", temp.real, temp.imag);
+    }
+
+    public static Complex add(Complex n1, Complex n2)
+    {
+        Complex temp = new Complex(0.0, 0.0);
+
+        temp.real = n1.real + n2.real;
+        temp.imag = n1.imag + n2.imag;
+
+        return(temp);
+    }
+}
+53.Java Program to Calculate Difference Between Two Time Periods
+public class Time {
+
+    int seconds;
+    int minutes;
+    int hours;
+
+    public Time(int hours, int minutes, int seconds) {
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+    }
+
+    public static void main(String[] args) {
+
+      // create objects of Time class
+        Time start = new Time(8, 12, 15);
+        Time stop = new Time(12, 34, 55);
+        Time diff;
+
+        // call difference method
+        diff = difference(start, stop);
+
+        System.out.printf("TIME DIFFERENCE: %d:%d:%d - ", start.hours, start.minutes, start.seconds);
+        System.out.printf("%d:%d:%d ", stop.hours, stop.minutes, stop.seconds);
+        System.out.printf("= %d:%d:%d\n", diff.hours, diff.minutes, diff.seconds);
+    }
+
+    public static Time difference(Time start, Time stop)
+    {
+        Time diff = new Time(0, 0, 0);
+
+        // if start second is greater
+        // convert minute of stop into seconds
+        // and add seconds to stop second
+        if(start.seconds > stop.seconds){
+            --stop.minutes;
+            stop.seconds += 60;
+        }
+
+        diff.seconds = stop.seconds - start.seconds;
+
+        // if start minute is greater
+        // convert stop hour into minutes
+        // and add minutes to stop minutes
+        if(start.minutes > stop.minutes){
+            --stop.hours;
+            stop.minutes += 60;
+        }
+
+        diff.minutes = stop.minutes - start.minutes;
+        diff.hours = stop.hours - start.hours;
+
+        // return the difference time
+        return(diff);
+    }
+}
+
+54.Java Code To Create Pyramid and Pattern
+public class Main {
+
+  public static void main(String[] args) {
+    int rows = 5;
+
+    for (int i = 1; i <= rows; ++i) {
+      for (int j = 1; j <= i; ++j) {
+        System.out.print("* ");
+      }
+      System.out.println();
+    }
+  }
+}
+55.Java Program to Remove All Whitespaces from a String
+public class Whitespaces {
+
+    public static void main(String[] args) {
+        String sentence = "T    his is b  ett     er.";
+        System.out.println("Original sentence: " + sentence);
+
+        sentence = sentence.replaceAll("\\s", "");
+        System.out.println("After replacement: " + sentence);
+    }
+}
+56.Java Program to Print an Array
+public class Array {
+
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+
+        for (int element: array) {
+            System.out.println(element);
+        }
+    }
+}
+57.Java Program to Convert String to Date
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class TimeString {
+
+    public static void main(String[] args) {
+        // Format y-M-d or yyyy-MM-d
+        String string = "2017-07-25";
+        LocalDate date = LocalDate.parse(string, DateTimeFormatter.ISO_DATE);
+
+        System.out.println(date);
+    }
+}
+58.Java Program to Round a Number to n Decimal Places
+public class Decimal {
+
+    public static void main(String[] args) {
+        double num = 1.34567;
+
+        System.out.format("%.4f", num);
+    }
+}
+59.Java Program to Concatenate Two Arrays
+import java.util.Arrays;
+
+public class Concat {
+
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3};
+        int[] array2 = {4, 5, 6};
+
+        int aLen = array1.length;
+        int bLen = array2.length;
+        int[] result = new int[aLen + bLen];
+
+        System.arraycopy(array1, 0, result, 0, aLen);
+        System.arraycopy(array2, 0, result, aLen, bLen);
+
+        System.out.println(Arrays.toString(result));
+    }
+}
+60.Java Program to Convert Character to String and Vice-Versa
+public class CharString {
+
+    public static void main(String[] args) {
+        char ch = 'c';
+        String st = Character.toString(ch);
+        // Alternatively
+        // st = String.valueOf(ch);
+
+        System.out.println("The string is: " + st);
+    }
+}
+61.Java Program to Check if An Array Contains a Given Value
+class Main {
+  public static void main(String[] args) {
+
+    int[] num = {1, 2, 3, 4, 5};
+    int toFind = 3;
+    boolean found = false;
+
+    for (int n : num) {
+      if (n == toFind) {
+        found = true;
+        break;
+      }
+    }
+    
+    if(found)
+      System.out.println(toFind + " is found.");
+    else
+      System.out.println(toFind + " is not found.");
+  }
+}
+62.Java Program to Check if a String is Empty or Null
+public class Null {
+
+    public static void main(String[] args) {
+        String str1 = null;
+        String str2 = "";
+
+        if(isNullOrEmpty(str1))
+            System.out.println("First string is null or empty.");
+        else
+            System.out.println("First string is not null or empty.");
+
+        if(isNullOrEmpty(str2))
+            System.out.println("Second string is null or empty.");
+        else
+            System.out.println("Second string is not null or empty.");
+    }
+
+    public static boolean isNullOrEmpty(String str) {
+        if(str != null && !str.isEmpty())
+            return false;
+        return true;
+    }
+}
+63.Java Program to Get Current Date/Time
+import java.time.LocalDateTime;
+
+public class CurrentDateTime {
+
+    public static void main(String[] args) {
+        LocalDateTime current = LocalDateTime.now();
+
+        System.out.println("Current Date and Time is: " + current);
+    }
+}
+64.Java Program to Convert Milliseconds to Minutes and Seconds
+import java.util.concurrent.TimeUnit;
+
+public class Milliseconds {
+
+    public static void main(String[] args) {
+        long milliseconds = 1000000;
+
+        // long minutes = (milliseconds / 1000) / 60;
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(milliseconds);
+
+        // long seconds = (milliseconds / 1000);
+        long seconds = TimeUnit.MILLISECONDS.toSeconds(milliseconds);
+
+        System.out.format("%d Milliseconds = %d minutes\n", milliseconds, minutes );
+        System.out.println("Or");
+        System.out.format("%d Milliseconds = %d seconds", milliseconds, seconds );
+
+    }
+}
+65.Java Program to Add Two Dates
+import java.util.Calendar;
+
+public class AddDates {
+
+    public static void main(String[] args) {
+
+        Calendar c1 = Calendar.getInstance();
+        Calendar c2 = Calendar.getInstance();
+        Calendar cTotal = (Calendar) c1.clone();
+
+        cTotal.add(Calendar.YEAR, c2.get(Calendar.YEAR));
+        cTotal.add(Calendar.MONTH, c2.get(Calendar.MONTH) + 1); // Zero-based months
+        cTotal.add(Calendar.DATE, c2.get(Calendar.DATE));
+        cTotal.add(Calendar.HOUR_OF_DAY, c2.get(Calendar.HOUR_OF_DAY));
+        cTotal.add(Calendar.MINUTE, c2.get(Calendar.MINUTE));
+        cTotal.add(Calendar.SECOND, c2.get(Calendar.SECOND));
+        cTotal.add(Calendar.MILLISECOND, c2.get(Calendar.MILLISECOND));
+
+        System.out.format("%s + %s = %s", c1.getTime(), c2.getTime(), cTotal.getTime());
+
+    }
+
+
+
+
+
+
+
